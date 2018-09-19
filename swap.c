@@ -3,6 +3,7 @@
 # include <time.h>
 
 int main(){
+  int i;
 
   time_t currentTime = time(NULL);
   //printf("This is the current time: %s\n", ctime(&currentTime));
@@ -16,24 +17,24 @@ int main(){
   int *ARR_Pointer = ARR + 9;
 
   //populating first 9 slots of arr with random ints
-  for (int i = 0; i < 9; i++){
+  for (i = 0; i < 9; i++){
     arr[i] = rand();
   }
 
   //setting last slot of arr to 0
   arr[9] = rand();
 
-  for (int i = 0; i < 10; i++){
+  for (i = 0; i < 10; i++){
     *(ARR_Pointer - i)   = *(arr_Pointer + i);
   }
 
   printf("-----------------------PRINTING OUT FIRST ARRAY-----------------------\n"); 
-  for (int i = 0; i < 10; i++){
+  for (i = 0; i < 10; i++){
     printf("arr[%d]: %d\n", i, arr[i]); 
   }
 
   printf("-----------------------PRINTING OUT SECOND ARRAY-----------------------\n"); 
-  for (int i = 0; i < 10; i++){
+  for (i = 0; i < 10; i++){
     printf("ARR[%d]: %d\n", i, ARR[i]); 
   }
   
